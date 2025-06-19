@@ -17,3 +17,15 @@
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   }
 }
+
+.liked {
+  background-color: rgba(rgb(33, 95, 33), 0.4);
+  color: darkgreen;
+  button {
+    box-shadow: rgb(33, 95, 33) 3px 3px 7px;
+    color: darkgreen;
+    &:active {
+      box-shadow: rgb(33, 95, 33) 0 0 5px;
+    }
+  }
+}

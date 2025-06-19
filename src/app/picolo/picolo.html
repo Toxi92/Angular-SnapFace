@@ -1,5 +1,5 @@
-<div class="picolo-card">
-    <h3>{{InputPicolo.title}}</h3>
+<div [ngClass]="{'liked':InputPicolo.isSnapped}" class="picolo-card">
+    <h3>{{InputPicolo.title | titlecase }}</h3>
     <img [src]="InputPicolo.imageURL" [alt]="InputPicolo.title">
     <p>{{InputPicolo.description}}</p>
     <p>Mise en ligne le {{InputPicolo.createdAt}} @if(InputPicolo.localisation){<b> à {{InputPicolo.localisation}} </b>} @else {<b>Localisation non spécifiée</b> }</p>

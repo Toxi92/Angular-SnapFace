@@ -1,11 +1,11 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { PicoloClass } from '../models/picoloComp';
-import { NgStyle } from '@angular/common';
+import { NgStyle,NgClass, TitleCasePipe } from '@angular/common';
 
 
 @Component({
   selector: 'app-picolo',
-  imports: [NgStyle],
+  imports: [NgStyle, NgClass, TitleCasePipe],
   templateUrl: './picolo.html',
   styleUrl: './picolo.scss',
   standalone: true
