@@ -1,0 +1,9 @@
+<div class="picolo-card">
+    <p>{{InputPicolo.description}}</p>
+    <img [src]="InputPicolo.imageURL" [alt]="InputPicolo.title">
+    <p>Mise en ligne le {{InputPicolo.createdAt}} @if(InputPicolo.localisation){<b> à {{InputPicolo.localisation}} </b>} @else {<b>Localisation non spécifiée</b> }</p>
+    <p>
+    <button (click)="InputPicolo.onAddSnap()">{{InputPicolo.SnapStatus}}</button>
+        👍 {{InputPicolo.snaps}}
+    </p>
+</div>

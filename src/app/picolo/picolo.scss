@@ -1,0 +1,17 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+.picolo-card {
+  width: 35%;
+  text-align: center;
+  img {
+    width: 75%;
+    max-width: 500px;
+    max-height: 500px;
+  }
+}

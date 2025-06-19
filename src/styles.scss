@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  font-family: Roboto, Helvetica, sans-serif;
+}
+
+/* Masquer la scrollbar globalement */
+html, body {
+  /* Pour Firefox */
+  scrollbar-width: none;
+  /* Pour Internet Explorer et Edge */
+  -ms-overflow-style: none;
+}
+
+/* Pour Webkit (Chrome, Safari, Opera) */
+html::-webkit-scrollbar, 
+body::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+  display: none;
+}
+
+/* Pour tous les éléments avec scroll */
+*::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+  display: none;
+}
