@@ -1,2 +1,3 @@
-<app-picolo [InputPicolo]="MyPicolo"></app-picolo>
-<app-picolo [InputPicolo]="MyPicolo2"></app-picolo>
+@for (unPicolo of lesPicolos; track unPicolo.title){
+    <app-picolo [InputPicolo]="unPicolo"></app-picolo>
+}

@@ -9,9 +9,11 @@
 .picolo-card {
   width: 35%;
   text-align: center;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
   img {
     width: 75%;
     max-width: 500px;
     max-height: 500px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   }
 }

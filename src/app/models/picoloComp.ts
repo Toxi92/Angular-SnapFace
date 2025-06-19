@@ -5,11 +5,11 @@ export class PicoloClass {
   constructor(
     public title: string,
     public description: string,
-    public createdAt: Date,
+    public createdAt: string,
     public snaps: number,
     public imageURL: string,
     public isSnapped: boolean,
-    public SnapStatus: string) {}
+    public SnapStatus: string = "Like") {}
     
   onAddSnap() {
     if (this.isSnapped) {

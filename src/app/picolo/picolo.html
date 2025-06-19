@@ -1,9 +1,10 @@
 <div class="picolo-card">
-    <p>{{InputPicolo.description}}</p>
+    <h3>{{InputPicolo.title}}</h3>
     <img [src]="InputPicolo.imageURL" [alt]="InputPicolo.title">
+    <p>{{InputPicolo.description}}</p>
     <p>Mise en ligne le {{InputPicolo.createdAt}} @if(InputPicolo.localisation){<b> à {{InputPicolo.localisation}} </b>} @else {<b>Localisation non spécifiée</b> }</p>
     <p>
     <button (click)="InputPicolo.onAddSnap()">{{InputPicolo.SnapStatus}}</button>
-        👍 {{InputPicolo.snaps}}
+        <span [ngStyle]="{ color: 'rgb(0, ' + InputPicolo.snaps + ', 0)' }">🤌 {{ InputPicolo.snaps }}</span>
     </p>
 </div>
