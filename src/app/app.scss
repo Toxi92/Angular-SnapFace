@@ -1,1 +1,59 @@
-/* Styles spécifiques au composant App */
+// Variables pour l'effet parallaxe
+$scroll-factor: 0.5;
+$header-height: 30vh;
+
+.parallax-container {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  
+  // Propriétés essentielles pour l'effet parallaxe
+  perspective: 1px;
+  perspective-origin: center top;
+  transform-style: preserve-3d;
+}
+
+.parallax-header {
+  height: $header-height;
+  position: relative;
+  
+  // Transformation qui crée l'effet parallaxe (le header défile plus lentement)
+  transform-origin: center top;
+  transform: 
+    translateZ(-#{$scroll-factor}px)
+    scale(1 + $scroll-factor);
+  
+  // Style de base pour le header
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section {
+  // Le contenu principal reste au niveau normal
+  transform: translateZ(0);
+  position: relative;
+  
+  // Style pour la section contenant la liste
+  background: #f8f9fa;
+  min-height: 100vh;
+  padding: 2rem 0;
+  z-index: 1;
+  
+  // Effet de superposition douce
+  margin-top: -5vh;
+  border-radius: 2rem 2rem 0 0;
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.1);
+}
+
+// Styles pour améliorer l'effet
+app-header {
+  width: 100%;
+  height: 100%;
+}
+
+app-picolo-list {
+  display: block;
+  width: 100%;
+}

@@ -25,3 +25,18 @@ body::-webkit-scrollbar {
   background: transparent;
   display: none;
 }
+
+// Styles essentiels pour l'effet parallaxe
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; // Important pour l'effet parallaxe
+}
+
+app-root {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
