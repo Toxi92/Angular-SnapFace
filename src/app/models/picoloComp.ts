@@ -1,7 +1,8 @@
 export class PicoloClass {
 
+  id:string;
   localisation?: string;
-
+  
   constructor(
     public title: string,
     public description: string,
@@ -9,7 +10,9 @@ export class PicoloClass {
     public snaps: number,
     public imageURL: string,
     public isSnapped: boolean,
-    public SnapStatus: string = "Like") {}
+    public SnapStatus: string = "Like") {
+      this.id = crypto.randomUUID().substring(0, 8);
+    }
     
   onAddSnap() {
     if (this.isSnapped) {
@@ -25,6 +28,11 @@ export class PicoloClass {
 
   setLocalisation(localisation: string) {
     this.localisation = localisation;
+  }
+
+  withLocation(location: string): PicoloClass {
+    this.setLocalisation(location);
+    return this;
   }
 
 
