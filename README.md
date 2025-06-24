@@ -1,3 +1,7 @@
+## Note :
+
+Ce projet est le résultat du suivi d'un cours openclassroom pour la découverte d'Angular et de son architecture, ce qui est intéressant dans l'éxercice mené est la technique et pas le contenu des pages ni leur style ( probablement généré à 70% avec ia ). 
+
 # Snapface
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.2.
