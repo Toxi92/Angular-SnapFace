@@ -1,11 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { PicoloList } from './picolo-list/picolo-list';
 import { Header } from './header/header';
+import { RouterOutlet } from '@angular/router';
 
 
 @Component({
   selector: 'app-root',
-  imports: [PicoloList, Header],
+  imports: [
+    Header,
+    RouterOutlet
+  ],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

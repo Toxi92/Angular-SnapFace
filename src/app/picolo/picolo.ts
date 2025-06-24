@@ -14,6 +14,19 @@ import { PicolosService } from '../services/picolos-service';
 
 export class Picolo{
   @Input() InputPicolo!: PicoloClass;
+  
   constructor(private picolosService: PicolosService) {}
   
+  // Méthodes publiques pour le template
+  onLike(): void {
+    if (this.InputPicolo && this.InputPicolo.id) {
+      this.picolosService.likePicoloByID(this.InputPicolo.id);
+    }
+  }
+  
+  onDislike(): void {
+    if (this.InputPicolo && this.InputPicolo.id) {
+      this.picolosService.likePicoloByID(this.InputPicolo.id); // Utilise la même méthode car onAddSnap() gère le toggle
+    }
+  }
 }

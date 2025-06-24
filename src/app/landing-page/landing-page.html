@@ -1,0 +1,38 @@
+<div class="landing-container">
+  <div class="hero-section">
+    <div class="hero-content">
+      <h1 class="hero-title">{{ title }}</h1>
+      <p class="hero-subtitle">{{ subtitle }}</p>
+      <div class="hero-buttons">
+        <button routerLink="picolos" class="btn btn-primary">{{ primaryButtonText }}</button>
+        <button class="btn btn-secondary">{{ secondaryButtonText }}</button>
+      </div>
+    </div>
+    <div class="hero-image">
+      <div class="image-placeholder">
+        <span class="image-icon">📸</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="features-section">
+    <div class="container">
+      <h2 class="section-title">{{ featuresTitle }}</h2>
+      <div class="features-grid">
+        <div class="feature-card" *ngFor="let feature of features">
+          <div class="feature-icon">{{ feature.icon }}</div>
+          <h3 class="feature-title">{{ feature.title }}</h3>
+          <p class="feature-description">{{ feature.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-section">
+    <div class="container">
+      <h2 class="cta-title">{{ ctaTitle }}</h2>
+      <p class="cta-description">{{ ctaDescription }}</p>
+      <button class="btn btn-large">{{ ctaButtonText }}</button>
+    </div>
+  </div>
+</div>

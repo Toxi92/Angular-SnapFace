@@ -4,7 +4,7 @@
     <p>{{InputPicolo.description}}</p>
     <p>Mise en ligne le {{InputPicolo.createdAt}} @if(InputPicolo.localisation){<b> à {{InputPicolo.localisation}} </b>} @else {<b>Localisation non spécifiée</b> }</p>
     <p>
-    <button (click)="picolosService.likePicoloByID(InputPicolo.id)">{{InputPicolo.SnapStatus}}</button>
+    <button (click)="onLike()">{{InputPicolo.SnapStatus}}</button>
         <span [ngStyle]="{ color: 'rgb(0, ' + InputPicolo.snaps + ', 0)' }">🤌 {{ InputPicolo.snaps }}</span>
     </p>
 </div>
